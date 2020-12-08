@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import *
+from api.models import *
 
 # Register your models here.
-admin.register(Pessoa)
-admin.register(Endereco)
+admin.site.register(Pessoa)
+admin.site.register(Endereco)

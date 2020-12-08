@@ -16,6 +16,9 @@ class Pessoa(models.Model):
     endereco = models.ForeignKey('Endereco', on_delete=models.CASCADE)
     foto = models.FileField(blank=True, null=True)
 
+    def __unicode__(self):
+        return self.nome
+
 class Endereco(models.Model):
     """
     Model para Controle de Endereços
@@ -30,3 +33,6 @@ class Endereco(models.Model):
     bairro = models.CharField(max_length=30)
     cidade = models.IntegerField()
     uf = models.CharField(max_length=2,choices=estados.STATE_CHOICES)
+
+    def __unicode__(self):
+        return self.rua

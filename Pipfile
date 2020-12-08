@@ -12,6 +12,7 @@ djangorestframework = "*"
 markdown = "*"
 django-filter = "*"
 django-rest-auth = {extras = ["with_social"],version = "*"}
+coverage = "*"
 
 [requires]
 python_version = "3.7"
